@@ -1,8 +1,10 @@
-export enum RoastLevel {
-  MILD = 'MILD',
-  SPICY = 'SPICY',
-  SCORCHED_EARTH = 'SCORCHED_EARTH',
-}
+export const RoastLevel = {
+  MILD: 'MILD',
+  SPICY: 'SPICY',
+  SCORCHED_EARTH: 'SCORCHED_EARTH',
+} as const;
+
+export type RoastLevel = (typeof RoastLevel)[keyof typeof RoastLevel];
 
 export type Language = 'ENGLISH' | 'HINDI';
 
